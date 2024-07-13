@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:supeerapp/menu/menu_page.dart';
 
-void main() {
+void main() async {
   runApp(const MyApp());
+
+  print('Iniciando a operação');
+  String data = await buscarDados();
+  print(data);
+}
+
+Future<String> buscarDados() async {
+  await Future.delayed(Duration(seconds: 2));
+  return 'Dados recebidos';
 }
 
 class MyApp extends StatelessWidget {
