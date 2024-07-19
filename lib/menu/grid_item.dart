@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:supeerapp/herois/lista_heroi_page.dart';
 import 'package:supeerapp/ia/ia_gerar_page.dart';
+import 'package:supeerapp/starwars/starwars_list_page.dart';
 
 class GridItem extends StatelessWidget {
   final int kingkong;
@@ -19,7 +20,7 @@ class GridItem extends StatelessWidget {
     List<String> tituloDaLista = [
       "Listagem de Herois",
       "Inteligencia artificial",
-      "Atracoes Turisticas",
+      "Star wars",
       "Criar Atracao",
     ];
 
@@ -41,6 +42,10 @@ class GridItem extends StatelessWidget {
                 builder: (context) => const IaGerarPage(),
               ),
             ),
+          2 => Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => const StarWarsListPage())),
           _ => print("Opcao invalida")
         }
       },
